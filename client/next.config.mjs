@@ -4,7 +4,7 @@ const nextConfig = {
     return [
       {
         source: "/",
-        destination: "/home",
+        destination: "/en",
         permanent: true, // 301 redirection
       },
     ];

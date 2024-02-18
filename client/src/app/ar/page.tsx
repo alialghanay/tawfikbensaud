@@ -22,7 +22,7 @@ export default function page() {
             <h4 className="text-primary text-xl font-[800] underline underline-offset-4">
               63K+
             </h4>
-            <p className="text-center text-sm">We've Helped Raise</p>
+            <p className="text-center text-sm">Weve Helped Raise</p>
           </div>
           <div className="flex flex-col justify-center items-center p-1 m-1 gap-2">
             <h4 className="text-primary text-xl font-[800] underline underline-offset-4">
