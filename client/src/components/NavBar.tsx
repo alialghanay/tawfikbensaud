@@ -1,13 +1,10 @@
 "use client";
 
 import React from "react";
-
 import { styled } from "@mui/material/styles";
-import FormGroup from "@mui/material/FormGroup";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Switch, { SwitchProps } from "@mui/material/Switch";
-import Stack from "@mui/material/Stack";
-import Typography from "@mui/material/Typography";
+import Switch from "@mui/material/Switch";
+
+import Link from "next/link";
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
@@ -59,9 +56,11 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 export default function NavBar() {
   return (
     <nav className="flex flex-row justify-center items-center pt-10 pb-5 m-1 w-screen h-3">
-      <div className="flex flex-row justify-center items-center p-3 m-1 gap-20 flex-grow h-[100%]">
-        <a href="/home">الرئيسية</a>
-        <a href="#">من نحن</a>
+      <div className="flex flex-row justify-center items-center p-3 m-1 gap-20 flex-grow h-[100%] text-xl">
+        <Link href="/home" className="active:text-primary">
+          home
+        </Link>
+        <Link href="#">about us</Link>
       </div>
       <div className="m-5">
         <MaterialUISwitch className="mr-auto" defaultChecked />
