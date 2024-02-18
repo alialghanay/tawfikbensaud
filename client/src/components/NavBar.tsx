@@ -56,14 +56,14 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 export default function NavBar() {
   return (
     <nav className="flex flex-row justify-center items-center pt-10 pb-5 m-1 w-screen h-3">
+      <div className="m-5">
+        <MaterialUISwitch className="mr-auto" defaultChecked />
+      </div>
       <div className="flex flex-row justify-center items-center p-3 m-1 gap-20 flex-grow h-[100%] text-xl">
         <Link href="/home" className="active:text-primary">
           home
         </Link>
         <Link href="#">about us</Link>
-      </div>
-      <div className="m-5">
-        <MaterialUISwitch className="mr-auto" defaultChecked />
       </div>
     </nav>
   );
