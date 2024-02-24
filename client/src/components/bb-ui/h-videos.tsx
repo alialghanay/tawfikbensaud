@@ -4,12 +4,10 @@ import { useState } from "react";
 import InteractiveBars from "./InteractiveBars";
 
 const HVideo = () => {
-  const [selectedYear, setSelectedYear] = useState<number | null>(null);
+  const [selectedYear, setSelectedYear] = useState<number | null>(data[0].year);
 
   const handleBarClick = (year: number) => {
-    // Update the photo based on the clicked year
-    console.log(`Year clicked: ${year}`);
-    // You can implement logic here to change the photo based on the selected year
+    setSelectedYear(year);
   };
 
   const data = [
@@ -21,8 +19,20 @@ const HVideo = () => {
   ];
 
   return (
-    <div className="z-40 w-full">
-      <InteractiveBars data={data} onBarClick={handleBarClick} />
+    <div className="z-40 w-full mt-2 flex flex-col items-center">
+      <h1 className="text-white text-4xl text-center font-bold my-4">
+        Watch Our Videos
+      </h1>
+      <div className="w-1/2 shadow-cos rounded-sm">
+        <video
+          src={`${selectedYear}.mp4`}
+          controls
+          autoPlay
+          muted
+          className="rounded-sm"
+        />
+      </div>
+      <InteractiveBars data={data} onBarClick={(year) => selectedYear(year)} />
     </div>
   );
 };

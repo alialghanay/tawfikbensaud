@@ -20,7 +20,10 @@ const InteractiveBars = ({ data, onBarClick }: BarData) => {
   return (
     <div className="flex justify-between mt-5 w-full">
       {data.map((yearData) => (
-        <div className="flex justify-between items-end" key={yearData.year}>
+        <div
+          className="w-full flex justify-between items-end"
+          key={yearData.year}
+        >
           <div className="flex flex-col items-center">
             <p
               className={`${
@@ -41,19 +44,20 @@ const InteractiveBars = ({ data, onBarClick }: BarData) => {
               onClick={() => handleBarClick(yearData.year)}
             ></div>
           </div>
-          {Array.from({ length: 5 }).map((_, index) => (
-            <div className="flex flex-col items-center" key={index}>
-              <div
-                className={`cursor-pointer rounded-t-md transition-height duration-300 ease-in-out w-1 bg-teal-200 opacity-70`}
-                style={{
-                  height: `${yearData.height * Math.random() * 0.9}px`,
-                  margin: "5px",
-                }}
-                onClick={() => handleBarClick(yearData.year)}
-                key={index}
-              ></div>
-            </div>
-          ))}
+          <div className="w-full flex justify-between items-end">
+            {Array.from({ length: 5 }).map((_, index) => (
+              <div className="flex flex-col items-center" key={index}>
+                <div
+                  className={`cursor-pointer rounded-t-md transition-height duration-300 ease-in-out w-1 bg-teal-200 opacity-70`}
+                  style={{
+                    height: `${yearData.height * Math.random() * 0.9}px`,
+                  }}
+                  onClick={() => handleBarClick(yearData.year)}
+                  key={index}
+                ></div>
+              </div>
+            ))}
+          </div>
         </div>
       ))}
     </div>

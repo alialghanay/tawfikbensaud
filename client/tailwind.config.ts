@@ -23,6 +23,9 @@ const config = {
         montserrat: ["Montserrat", "sans-serif"],
         cairo: ["Cairo", "sans-serif"],
       },
+      boxShadow: {
+        cos: "2px 2px 0px 4px rgba(0, 0, 0, 0.75)",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
