@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="242" fill="none" xmlns:v="https://vecta.io/nano">
+  <style>
+    .line {
+      stroke: #039c9b;
+      stroke-width: 4;
+    }
+    .fill {
+      fill: #07c4c3;
+    }
+  </style>
+  <!-- Lines -->
+  <g class="line">
+    <path d="M1425.74 247.756V94.73"/>
+    <path d="M116.805 242.314V98.351"/>
+    <path d="M177.249 242.31V74.671"/>
+    <path d="M239.779 242.291V140.176"/>
+    <path d="M300.221 242.291V140.176"/>
+    <path d="M358.583 242.314V98.351"/>
+    <path d="M481.556 242.291V98.374"/>
+    <path d="M542 242.291v-71.048"/>
+    <path d="M601.404 242.3v-94.748"/>
+    <path d="M662.89 242.291V140.176"/>
+    <path d="M722.291 242.297V105.655"/>
+    <path d="M845.281 242.298V118.407"/>
+    <path d="M904.667 242.291v-51.009"/>
+    <path d="M967.195 242.314V98.351"/>
+    <path d="M1025.56 242.291V76.513"/>
+    <path d="M1148.53 242.312V85.601"/>
+    <path d="M1206.89 242.291V140.176"/>
+    <path d="M1267.33 242.291v-51.009"/>
+    <path d="M1322.57 242.543v-82.482"/>
+  </g>
+  <!-- Circles -->
+  <g class="fill">
+    <circle cx="68.444" cy="58.296" r="8" fill="#00fffc"/>
+    <circle cx="21.07" cy="33" r="8"/>
+    <circle cx="427.891" cy="33" r="8"/>
+    <circle cx="381.07" cy="42" r="8"/>
+    <circle cx="773.776" cy="42" r="8"/>
+    <circle cx="1086.87" cy="42" r="8"/>
+    <circle cx="1046.46" cy="42" r="8"/>
+  </g>
+</svg>

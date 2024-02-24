@@ -1,14 +1,18 @@
 import NavBar from "@/components/NavBar";
 import AboutUs from "@/components/about-us";
+import ContactUs from "@/components/contact-us";
+import Donate from "@/components/donate";
 import HeroSection from "@/components/hero-section";
 import React from "react";
 
 export default function page() {
   return (
-    <div className="container flex flex-col justify-start items-center mx-8 my-4">
+    <main className="container flex flex-col my-4 mx-0 p-0">
       <NavBar />
       <HeroSection />
       <AboutUs />
-    </div>
+      <Donate />
+      <ContactUs />
+    </main>
   );
 }

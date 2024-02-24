@@ -73,8 +73,12 @@
 }
 
 @layer base {
-  * {
-    @apply border-border;
+  *,
+  ::before,
+  ::after {
+    border-width: 0;
+    box-sizing: unset;
+    font-family: "Cairo";
   }
   body {
     @apply bg-background text-foreground;
