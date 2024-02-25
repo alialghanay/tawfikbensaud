@@ -1,4 +1,4 @@
-import NavBar from "@/components/NavBar";
+import NavBar from "@/components/navs/NavBar";
 import AboutUs from "@/components/about-us";
 import ContactUs from "@/components/contact-us";
 import Donate from "@/components/donate";

@@ -15,7 +15,7 @@ const LanguageSwitcher = ({
   onChangeLanguage,
 }: LanguageSwitcher) => {
   return (
-    <div className="language-switcher">
+    <div className="language-switcher shadow-cos">
       <button
         className={selectedLanguage === "en" ? "active" : ""}
         onClick={() => onChangeLanguage("en")}

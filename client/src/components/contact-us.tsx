@@ -4,7 +4,7 @@ import { FaSquareFacebook } from "react-icons/fa6";
 
 const ContactUs = () => {
   return (
-    <section className="container flex flex-col items-center">
+    <section id="contact-us" className="container flex flex-col items-center">
       <h1 className="text-primary font-bold text-4xl">our Paltform</h1>
       <div className="flex justify-between">
         <FaInstagram className="size-16" />
