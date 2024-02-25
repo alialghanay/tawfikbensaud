@@ -34,7 +34,7 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 flex bg-primary-foreground z-10">
+    <nav className="fixed top-0 left-0 right-0 flex bg-primary-foreground z-40">
       <div className="relative w-1/4 mx-4">
         <LanguageSwitcher
           selectedLanguage={selectedLanguage}

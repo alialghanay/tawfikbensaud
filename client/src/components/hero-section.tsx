@@ -9,13 +9,8 @@ const HeroSection = () => {
       className="relative container flex flex-col items-center bg-primary mt-8 mx-0"
       id="home"
     >
-      <div className="absolute inset-0 opacity-20 z-0">
-        <Image
-          src="/world.svg"
-          alt="map of the world"
-          layout="fill"
-          objectFit="cover"
-        />
+      <div className="absolute inset-0 opacity-10 z-0 w-full h-1/2">
+        <Image src="/world.svg" alt="map of the world" fill />
       </div>
       <h1
         className="font-rowdies text-wrap w-[400px] text-7xl font-light text-primary-foreground self-start

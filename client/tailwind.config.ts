@@ -25,6 +25,7 @@ const config = {
       },
       boxShadow: {
         cos: "2px 2px 0px 4px rgba(0, 0, 0, 0.75)",
+        cos2: "0px 50px 100px -15px rgba(0,0,0,0.5) inset;",
       },
       colors: {
         border: "hsl(var(--border))",

@@ -3,14 +3,17 @@ import { useState } from "react";
 
 type YearData = {
   year: number;
-  height: number;
+  des: string;
 };
 interface BarData {
   data: YearData[];
   onBarClick: (year: number) => void;
+  InitialYear?: number;
 }
-const InteractiveBars = ({ data, onBarClick }: BarData) => {
-  const [selectedYear, setSelectedYear] = useState<number | null>(null);
+const InteractiveBars = ({ data, onBarClick, InitialYear }: BarData) => {
+  const [selectedYear, setSelectedYear] = useState<number | undefined>(
+    InitialYear
+  );
 
   const handleBarClick = (year: number) => {
     setSelectedYear(year);
@@ -37,20 +40,20 @@ const InteractiveBars = ({ data, onBarClick }: BarData) => {
             <div
               className={`cursor-pointer rounded-t-md transition-height duration-300 ease-in-out ${
                 selectedYear === yearData.year
-                  ? "bg-teal-500 w-2 shadow-border border-teal-100 border border-opacity-25"
+                  ? "bg-teal-500 w-2 border-teal-200 border border-opacity-12 shadow shadow-teal-200"
                   : "w-1 bg-teal-200"
               }`}
-              style={{ height: `${yearData.height}px` }}
+              style={{ height: `${150}px` }}
               onClick={() => handleBarClick(yearData.year)}
             ></div>
           </div>
           <div className="w-full flex justify-between items-end">
-            {Array.from({ length: 5 }).map((_, index) => (
+            {Array.from({ length: 10 }).map((_, index) => (
               <div className="flex flex-col items-center" key={index}>
                 <div
-                  className={`cursor-pointer rounded-t-md transition-height duration-300 ease-in-out w-1 bg-teal-200 opacity-70`}
+                  className={`cursor-pointer rounded-t-md transition-height duration-300 ease-in-out w-1 bg-teal-200 opacity-25`}
                   style={{
-                    height: `${yearData.height * Math.random() * 0.9}px`,
+                    height: `${150 * Math.random() * 0.9}px`,
                   }}
                   onClick={() => handleBarClick(yearData.year)}
                   key={index}
