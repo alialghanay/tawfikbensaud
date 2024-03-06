@@ -12,9 +12,9 @@ const config = {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: "0rem",
       screens: {
-        "2xl": "1400px",
+        "2xl": "1440px",
       },
     },
     extend: {
@@ -22,6 +22,9 @@ const config = {
         rowdies: ["Rowdies", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
         cairo: ["Cairo", "sans-serif"],
+      },
+      dropShadow: {
+        cos: "4px 8px 4px rgba(0, 0, 0, 0.9)",
       },
       boxShadow: {
         cos: "2px 2px 0px 4px rgba(0, 0, 0, 0.75)",

@@ -23,7 +23,7 @@ const AboutUs = () => {
         {person.map((person, index) => {
           return (
             <div key={index}>
-              <div className="bg-primary rounded-t-full pt-2 px-4 shadow-cos shadow-black m-4">
+              <div className="bg-primary rounded-t-full pt-2 px-4 shadow-cos shadow-black m-4 w-auto h-auto">
                 <Image
                   src={"/" + person.image}
                   alt={person.name}

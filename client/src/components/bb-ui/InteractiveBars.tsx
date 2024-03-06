@@ -53,7 +53,7 @@ const InteractiveBars = ({ data, onBarClick, InitialYear }: BarData) => {
                 <div
                   className={`cursor-pointer rounded-t-md transition-height duration-300 ease-in-out w-1 bg-teal-200 opacity-25`}
                   style={{
-                    height: `${150 * Math.random() * 0.9}px`,
+                    height: `${Math.floor(150 * Math.random() * 0.9)}px`,
                   }}
                   onClick={() => handleBarClick(yearData.year)}
                   key={index}

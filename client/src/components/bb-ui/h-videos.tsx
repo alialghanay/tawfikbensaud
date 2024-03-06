@@ -19,7 +19,7 @@ const HVideo = () => {
   ];
 
   return (
-    <div className="z-10 w-full mt-2 flex flex-col items-center">
+    <div className="z-30 w-full mt-2 flex flex-col items-center">
       <h1 className="text-white text-4xl text-center font-bold my-4">
         Watch Our Videos
       </h1>

@@ -1,38 +1,31 @@
 "use client";
 import Image from "next/image";
+import HMain from "./bb-ui/h-main";
+import "./bb-ui/text-shadow.css";
 import HStatistic from "./bb-ui/h-statistic";
 import HVideo from "./bb-ui/h-videos";
-
 const HeroSection = () => {
   return (
     <section
-      className="relative container flex flex-col items-center bg-primary mt-8 mx-0"
+      className="w-full relative container bg-primary overflow-hidden -z-40 p-0 mt-8 mx-0"
       id="home"
     >
-      <div className="absolute inset-0 opacity-10 z-0 w-full h-3/5">
+      <div className="w-full absolute inset-0 h-3/4">
         <Image
           src="/bg.svg"
-          alt="iam tawfik website background "
+          alt="iam tawfik website background"
           fill
-          className="w-full h-full"
+          priority
+          className="-z-30 object-cover opacity-15"
         />
-        <div className="absolute inset-0 z-0 bg-gradient-to-t from-teal-700 to-transparent"></div>
+        <div className="absolute inset-0 -z-10 bg-gradient-to-t from-teal-700 to-transparent"></div>
       </div>
 
-      <p className="self-start p-5 m-5 z-10">
-        <span className="text-white text-3xl m-0">2014 - 2024</span>
-        <br />
-        <span className="text-white text-6xl font-bold font-rowdies m-0">
-          I AM
-        </span>
-        <br />
-        <span className="text-teal-400 text-6xl font-bold font-rowdies m-0">
-          <br />
-          TAWFIK
-        </span>
-      </p>
-      <HStatistic />
-      <HVideo />
+      <div className="flex flex-col items-center">
+        <HMain />
+        <HStatistic />
+        <HVideo />
+      </div>
 
       <div className="relative m-1">
         <div className="absolute inset-0 bg-gradient-to-t from-[#03847B] via-transparent border-2 border-border rounded-2xl"></div>
