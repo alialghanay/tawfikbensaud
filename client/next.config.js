@@ -1,11 +1,22 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
-  transpilePackages: ["@mui/x-charts"],
+  i18n: {
+    locales: ["en", "ar"],
+    defaultLocale: "ar",
+  },
   env: {
     API: process.env.API,
   },
-  experimental: {},
+  async redirects() {
+    return [
+      {
+        source: "/",
+        destination: "/",
+        permanent: true,
+      },
+    ];
+  },
   reactStrictMode: false,
 };
 

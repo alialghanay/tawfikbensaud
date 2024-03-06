@@ -6,9 +6,11 @@ import { MdMenu } from "react-icons/md";
 import { HiOutlineXMark } from "react-icons/hi2";
 import navs from "@/lib/json/navs.json";
 import MenuOverlay from "./MenuOverlay";
+import { useTranslation } from "react-i18next";
 
 const NavBar = () => {
-  const [selectedLanguage, setSelectedLanguage] = useState("en");
+  const { t } = useTranslation();
+  const [selectedLanguage, setSelectedLanguage] = useState("ar");
   const [activeSection, setActiveSection] = useState("home");
   const [navbarOpen, setNavbarOpen] = useState(false);
 
@@ -46,7 +48,10 @@ const NavBar = () => {
           <div className="w-1/4 ml-2">
             <LanguageSwitcher
               selectedLanguage={selectedLanguage}
-              onChangeLanguage={(e) => setSelectedLanguage(e)}
+              onChangeLanguage={(e) => {
+                t(e);
+                setSelectedLanguage(e);
+              }}
             />
           </div>
           <div className="w-3/4 mobile-menu block md:hidden mr-2">
