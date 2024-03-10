@@ -1,8 +1,18 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "http://localhost:1337/",
+        port: "",
+        pathname: "**",
+      },
+    ],
+  },
   i18n: {
-    locales: ["en", "ar"],
+    locales: ["ar", "en-US"],
     defaultLocale: "ar",
   },
   env: {

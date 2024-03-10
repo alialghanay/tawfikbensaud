@@ -1,0 +1,14 @@
+{
+  "en-US": [
+    { "title": "home", "path": "home" },
+    { "title": "donate", "path": "donate" },
+    { "title": "contact us", "path": "contact-us" },
+    { "title": "about us", "path": "about-us" }
+  ],
+  "ar": [
+    { "title": "الصفحة الرئيسية", "path": "home" },
+    { "title": "تبرع", "path": "donate" },
+    { "title": "تواصل معنا", "path": "contact-us" },
+    { "title": "تعرف علينا", "path": "about-us" }
+  ]
+}
