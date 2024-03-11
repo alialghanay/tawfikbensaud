@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import InteractiveBars from "./InteractiveBars";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "react-i18next";
 
 interface YearData {
   year: string;
@@ -28,8 +28,8 @@ const HVideo: React.FC = () => {
         );
         const data = await response.json();
         const galleryData: YearData[] = data.data.map((item: any) => ({
-          year: item.attributes.media.data.attributes.alternativeText,
-          des: item.attributes.media.data.attributes.caption,
+          year: item.attributes.title,
+          des: item.attributes.description,
           url:
             "http://localhost:1337" + item.attributes.media.data.attributes.url,
         }));

@@ -43,7 +43,7 @@ const NavBar = () => {
     return () => {
       observer.disconnect();
     };
-  }, []);
+  }, [i18n.language]);
 
   return (
     <nav className="w-full fixed top-0 left-0 bg-primary-foreground z-40">

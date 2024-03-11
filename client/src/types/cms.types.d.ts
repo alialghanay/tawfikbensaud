@@ -37,4 +37,88 @@ declare module "cms-interfaces" {
     pageCount: number;
     total: number;
   }
+  export interface TeamMember {
+    id: number;
+    attributes: {
+      name: string;
+      specialty: string;
+      position: string;
+      facebook: string;
+      linkedin: string;
+      twitter: string;
+      instagram: string;
+      createdAt: string;
+      updatedAt: string;
+      publishedAt: string;
+      locale: string;
+      custom_page: boolean;
+      custom_page_url: string;
+      pofilepic: {
+        data: Array<{
+          id: number;
+          attributes: {
+            name: string;
+            alternativeText: string | null;
+            caption: string | null;
+            width: number;
+            height: number;
+            formats: {
+              thumbnail: {
+                name: string;
+                hash: string;
+                ext: string;
+                mime: string;
+                path: string | null;
+                width: number;
+                height: number;
+                size: number;
+                url: string;
+              };
+              small: {
+                name: string;
+                hash: string;
+                ext: string;
+                mime: string;
+                path: string | null;
+                width: number;
+                height: number;
+                size: number;
+                url: string;
+              };
+            };
+            hash: string;
+            ext: string;
+            mime: string;
+            size: number;
+            url: string;
+            previewUrl: string | null;
+            provider: string;
+            provider_metadata: null;
+            createdAt: string;
+            updatedAt: string;
+          };
+        }>;
+      };
+      localizations: {
+        data: Array<{
+          id: number;
+          attributes: {
+            name: string;
+            specialty: string;
+            position: string;
+            facebook: string;
+            linkedin: string;
+            twitter: string;
+            instagram: string;
+            createdAt: string;
+            updatedAt: string;
+            publishedAt: string;
+            locale: string;
+            custom_page: boolean | null;
+            custom_page_url: string | null;
+          };
+        }>;
+      };
+    };
+  }
 }
