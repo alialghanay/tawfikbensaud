@@ -55,15 +55,22 @@ const TeamLargeSecreens = () => {
     fetchData();
   }, [i18n.language]);
   return (
-    <div className="font-cairo hidden lg:grid grid-cols-2 grid-rows-2 gap-x-36 gap-y-16">
+    <div className="font-cairo hidden lg:grid grid-cols-2 grid-rows-2 gap-x-72 gap-y-16">
       {teamData.map((person, index) => {
         {
-          if ((index + 1) % 3 == 0)
+          if ((index + 1) % 3 == 0) {
             return (
               <div
                 key={index}
-                className="col-span-2 row-span-2 flex justify-center items-center"
+                className="relative col-span-2 row-span-2 flex justify-center items-center"
               >
+                <div className="absolute w-[480px] h-[480px] bottom-6 -right-[480px] -rotate-45 -z-10 opacity-50">
+                  <Image
+                    src="/fingerprint.svg"
+                    alt="iam tawfik website background"
+                    fill
+                  />
+                </div>
                 <div className="w-fit">
                   <div className="bg-primary rounded-t-full pt-2 px-4 shadow-cos shadow-black m-4 w-auto h-auto">
                     <Image
@@ -118,9 +125,24 @@ const TeamLargeSecreens = () => {
                 </div>
               </div>
             );
+          }
         }
+
         return (
-          <div key={index} className="text-center">
+          <div key={index} className="relative text-center">
+            <div
+              className={
+                index % 2 == 0
+                  ? "absolute w-96 h-96 bottom-0 left-0 rotate-45 -z-10 opacity-50"
+                  : "absolute w-96 h-96 top-0 left-0 -rotate-45 -z-10 opacity-50"
+              }
+            >
+              <Image
+                src="/fingerprint.svg"
+                alt="iam tawfik website background"
+                fill
+              />
+            </div>
             <div className="bg-primary rounded-t-full pt-2 px-4 shadow-cos shadow-black m-4 w-auto h-auto">
               <Image
                 src={person.url}

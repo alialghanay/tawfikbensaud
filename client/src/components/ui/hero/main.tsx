@@ -32,7 +32,7 @@ const HMain = () => {
           rotate: 30,
           transition: { duration: 1 },
         }}
-        onHoverStart={() => setCurrentImage("/tawfikbensaud.svg")}
+        onHoverStart={() => setCurrentImage("/tawfikbensaud-nice.svg")}
         onHoverEnd={() => setCurrentImage("/tawfikbensaud-white.svg")}
         whileTap={{
           scale: 1.1,
@@ -40,7 +40,7 @@ const HMain = () => {
           rotate: 30,
           transition: { duration: 0.5 },
         }}
-        onTap={() => setCurrentImage("/tawfikbensaud.svg")}
+        onTap={() => setCurrentImage("/tawfikbensaud-nice.svg")}
         onPanEnd={() => setCurrentImage("/tawfikbensaud-white.svg")}
       >
         <Image src={currentImage} alt="iam tawfik logo" fill />

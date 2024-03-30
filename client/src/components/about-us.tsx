@@ -1,10 +1,14 @@
+import Image from "next/image";
 import Main from "./ui/about/main";
 import TeamCarousel from "./ui/about/team";
 import TeamLargeSecreens from "./ui/about/team-lg";
 
 const AboutUs = () => {
   return (
-    <section className="flex flex-col justify-start items-center" id="about-us">
+    <section
+      className="flex flex-col justify-start items-center overflow-hidden"
+      id="about-us"
+    >
       <Main />
       <TeamCarousel />
       <TeamLargeSecreens />
