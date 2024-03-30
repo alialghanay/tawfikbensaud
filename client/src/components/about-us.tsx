@@ -1,8 +1,10 @@
-import Image from "next/image";
-import Main from "./ui/about/main";
-import TeamCarousel from "./ui/about/team";
-import TeamLargeSecreens from "./ui/about/team-lg";
+import dynamic from "next/dynamic";
 
+const Main = dynamic(() => import("./ui/about/main"), { ssr: false });
+const TeamCarousel = dynamic(() => import("./ui/about/team"), { ssr: false });
+const TeamLargeSecreens = dynamic(() => import("./ui/about/team-lg"), {
+  ssr: false,
+});
 const AboutUs = () => {
   return (
     <section

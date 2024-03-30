@@ -1,6 +1,11 @@
-import SectionOne from "./ui/donate/section-one";
-import SectionTwo from "./ui/donate/section-two";
+import dynamic from "next/dynamic";
 
+const SectionOne = dynamic(() => import("./ui/donate/section-one"), {
+  ssr: false,
+});
+const SectionTwo = dynamic(() => import("./ui/donate/section-two"), {
+  ssr: false,
+});
 const Donate = () => {
   return (
     <div

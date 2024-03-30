@@ -28,7 +28,7 @@ const HMain = () => {
         transition={{ duration: 1 }}
         whileHover={{
           scale: 1.1,
-          opacity: 1, // Change from 0 to 1 on hover
+          opacity: 1,
           rotate: 30,
           transition: { duration: 1 },
         }}

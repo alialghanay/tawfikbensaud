@@ -55,7 +55,6 @@ const TeamCarousel = () => {
             "http://localhost:1337" +
             item.attributes.pofilepic.data.attributes.url,
         }));
-        console.log(teamData);
         setTeamData(teamData);
       } catch (error) {
         console.error("Error fetching gallery data:", error);

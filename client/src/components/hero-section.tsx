@@ -1,7 +1,9 @@
 import Image from "next/image";
-import HMain from "./ui/hero/main";
-import HStatistic from "./ui/hero/statistic";
-import HVideo from "./ui/hero/videos";
+import dynamic from "next/dynamic";
+
+const HMain = dynamic(() => import("./ui/hero/main"), { ssr: false });
+const HStatistic = dynamic(() => import("./ui/hero/statistic"), { ssr: false });
+const HVideo = dynamic(() => import("./ui/hero/videos"), { ssr: false });
 const HeroSection = () => {
   return (
     <section
