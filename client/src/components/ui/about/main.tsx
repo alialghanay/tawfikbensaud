@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
-import Button from "../t-button";
 import { useTranslation } from "next-i18next";
+import TLink from "@/components/link";
 
 interface Data {
   title: string;
@@ -44,10 +44,9 @@ const Main = () => {
       >
         {data[0].content}
       </p>
-      <Button
-        label={i18n.language == "en-US" ? "Explore" : "تصفح"}
-        onClick={() => console.log("clicked")}
-      />
+      <TLink href="/about-tawfik">
+        {i18n.language == "en-US" ? "Explore" : "تصفح"}
+      </TLink>
     </>
   );
 };
