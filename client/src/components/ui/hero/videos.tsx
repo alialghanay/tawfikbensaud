@@ -22,7 +22,7 @@ const HVideo: React.FC = () => {
     const fetchGalleryData = async () => {
       try {
         const response = await fetch(
-          `http://localhost:1337/api/galleries?locale=${
+          `${process.env.API_URL}/galleries?locale=${
             i18n.language == "en-US" ? "en" : "ar"
           }&populate=*`
         );
@@ -30,9 +30,17 @@ const HVideo: React.FC = () => {
         const galleryData: YearData[] = data.data.map((item: any) => ({
           year: item.attributes.title,
           des: item.attributes.description,
-          url:
-            "http://localhost:1337" + item.attributes.media.data.attributes.url,
+          url: process.env.API + item.attributes.media.data.attributes.url,
         }));
+        galleryData.sort((a, b) => {
+          if (a.year < b.year) {
+            return -1;
+          }
+          if (a.year > b.year) {
+            return 1;
+          }
+          return 0;
+        });
         setGalleryData(galleryData);
       } catch (error) {
         console.error("Error fetching gallery data:", error);
@@ -91,7 +99,7 @@ const HVideo: React.FC = () => {
       <InteractiveBars
         data={galleryData}
         onBarClick={handleBarClick}
-        InitialYear={"2022"}
+        InitialYear={selectedYear}
       />
     </div>
   );

@@ -19,7 +19,7 @@ const Statistic: React.FC = () => {
     const fetchStatistics = async () => {
       try {
         const response = await fetch(
-          `http://localhost:1337/api/statistics?locale=${
+          `${process.env.API_URL}/statistics?locale=${
             i18n.language == "en-US" ? "en" : "ar"
           }`
         );

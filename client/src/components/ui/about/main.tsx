@@ -15,9 +15,10 @@ const Main = () => {
     const fetchGalleryData = async () => {
       try {
         const response = await fetch(
-          `http://localhost:1337/api/abouts?locale=${
-            i18n.language == "en-US" ? "en" : "ar"
-          }&populate=*`
+          process.env.API_URL +
+            `/abouts?locale=${
+              i18n.language == "en-US" ? "en" : "ar"
+            }&populate=*`
         );
         const res = await response.json();
         const FetcheData: Data[] = res.data.map((item: any) => ({
@@ -44,9 +45,9 @@ const Main = () => {
       >
         {data[0].content}
       </p>
-      <TLink href="/about-tawfik">
+      {/* <TLink href="/about-tawfik">
         {i18n.language == "en-US" ? "Explore" : "تصفح"}
-      </TLink>
+      </TLink> */}
     </>
   );
 };

@@ -26,7 +26,7 @@ const TeamLargeSecreens = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `http://localhost:1337/api/teams?locale=${
+          `${process.env.API_URL}/teams?locale=${
             i18n.language == "en-US" ? "en" : "ar"
           }&populate=*`
         );
@@ -41,9 +41,7 @@ const TeamLargeSecreens = () => {
           instagram: item.attributes.instagram,
           customPage: item.attributes.custom_page,
           cPUrl: item.attributes.custom_page_url,
-          url:
-            "http://localhost:1337" +
-            item.attributes.pofilepic.data.attributes.url,
+          url: process.env.API + item.attributes.pofilepic.data.attributes.url,
         }));
 
         setTeamData(teamData);

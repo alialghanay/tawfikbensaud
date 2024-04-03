@@ -21,31 +21,29 @@ const HMain = () => {
         </span>
       </p>
       <motion.div
-        className="relative w-[100px] h-[150px] xs:w-[125px] xs:h-[200px] sm:w-[150px] sm:h-[250px] md:w-[250px] md:h-[350px] lg:w-[350px] lg:h-[450px] 2xl:w-[502px] 2xl:h-[611px]"
+        className="relative top-4 right-4 w-[100px] h-[150px] xs:w-[125px] xs:h-[200px] sm:w-[150px] sm:h-[250px] md:w-[250px] md:h-[350px] lg:w-[350px] lg:h-[450px] 2xl:w-[502px] 2xl:h-[611px]"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 0.02 }}
         whileHover={{
-          scale: 1.1,
+          scale: 1.05,
           opacity: 1,
-          rotate: 30,
-          transition: { duration: 1 },
+          transition: { duration: 0.02 },
         }}
         onHoverStart={() => setCurrentImage("/tawfikbensaud-nice.svg")}
         onHoverEnd={() => setCurrentImage("/tawfikbensaud-white.svg")}
         whileTap={{
-          scale: 1.1,
+          scale: 1.01,
           opacity: 1,
-          rotate: 30,
-          transition: { duration: 0.5 },
+          transition: { duration: 0.02 },
         }}
         onTap={() => setCurrentImage("/tawfikbensaud-nice.svg")}
         onPanEnd={() => setCurrentImage("/tawfikbensaud-white.svg")}
       >
         <Image src={currentImage} alt="iam tawfik logo" fill />
       </motion.div>
-      <div className="-z-10 absolute -top-8 -right-10 w-[200px] h-[200px] xs:w-[225px] xs:h-[225px] sm:w-[300px] sm:h-[300px] sm:-top-12 sm:-right-16 md:w-[400px] md:h-[400px] lg:w-[600px] lg:h-[600px] lg:-top-16 lg:-right-28 2xl:w-[800px] 2xl:h-[800px] 2xl:-top-20 2xl:-right-32">
+      <div className="-z-10 absolute -top-8 -right-12 w-[200px] h-[200px] xs:w-[225px] xs:h-[225px] sm:w-[300px] sm:h-[300px] sm:-top-12 sm:-right-16 md:w-[400px] md:h-[400px] lg:w-[600px] lg:h-[600px] lg:-top-16 lg:-right-28 2xl:w-[800px] 2xl:h-[800px] 2xl:-top-20 2xl:-right-32">
         <Image
           src="/Rectangle.svg"
           alt="iam tawfik logo background"
