@@ -2,16 +2,17 @@
 
 const nextConfig = {
   env: {
-    API: process.env.API,
-    API_URL: process.env.API_URL,
+    API: "https://tawfikbensaud.onrender.com",
+    API_URL: "https://tawfikbensaud.onrender.com/api",
   },
   images: {
+    domains: ["hxnpjxawxebaldzzohxv.supabase.co"], // Add your Supabase hostname here
     remotePatterns: [
       {
-        protocol: "http",
-        hostname: "localhost",
-        port: "1337",
-        pathname: "/uploads/**",
+        protocol: "https",
+        hostname: "hxnpjxawxebaldzzohxv.supabase.co",
+        port: "443",
+        pathname: "/storage/**",
       },
     ],
   },

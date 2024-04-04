@@ -30,7 +30,7 @@ const HVideo: React.FC = () => {
         const galleryData: YearData[] = data.data.map((item: any) => ({
           year: item.attributes.title,
           des: item.attributes.description,
-          url: process.env.API + item.attributes.media.data.attributes.url,
+          url: item.attributes.media.data.attributes.url,
         }));
         galleryData.sort((a, b) => {
           if (a.year < b.year) {

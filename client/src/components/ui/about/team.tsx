@@ -51,7 +51,7 @@ const TeamCarousel = () => {
           instagram: item.attributes.instagram,
           customPage: item.attributes.custom_page,
           cPUrl: item.attributes.custom_page_url,
-          url: process.env.API + item.attributes.pofilepic.data.attributes.url,
+          url: item.attributes.pofilepic.data.attributes.url,
         }));
         setTeamData(teamData);
       } catch (error) {
