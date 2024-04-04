@@ -1,14 +1,17 @@
 module.exports = ({ env }) => ({
   upload: {
     config: {
-      provider: "cloudinary",
+      provider: "strapi-provider-upload-supabase",
       providerOptions: {
-        cloud_name: env("CLOUDINARY_NAME"),
-        api_key: env("CLOUDINARY_KEY"),
-        api_secret: env("CLOUDINARY_SECRET"),
+        apiUrl: env("SUPABASE_API_URL"),
+        apiKey: env("SUPABASE_API_KEY"),
+        bucket: env("SUPABASE_BUCKET"),
+        directory: env("SUPABASE_DIRECTORY"),
+        options: {},
       },
       actionOptions: {
         upload: {},
+        uploadStream: {},
         delete: {},
       },
     },
