@@ -37,7 +37,7 @@ const TeamCarousel = () => {
       try {
         const response = await fetch(
           `${process.env.API_URL}/teams?locale=${
-            i18n.language == "en-US" ? "en" : "ar"
+            i18n.language.startsWith("en") ? "en" : "ar"
           }&populate=*`
         );
         const data = await response.json();
@@ -108,7 +108,7 @@ const TeamCarousel = () => {
               </div>
               {person.customPage ? (
                 <Button
-                  label={i18n.language == "en-US" ? "Explore" : "تصفح"}
+                  label={i18n.language.startsWith("en") ? "Explore" : "تصفح"}
                   onClick={() => window.open(person.cPUrl)}
                 />
               ) : null}

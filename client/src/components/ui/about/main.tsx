@@ -17,7 +17,7 @@ const Main = () => {
         const response = await fetch(
           process.env.API_URL +
             `/abouts?locale=${
-              i18n.language == "en-US" ? "en" : "ar"
+              i18n.language.startsWith("en") ? "en" : "ar"
             }&populate=*`
         );
         const res = await response.json();

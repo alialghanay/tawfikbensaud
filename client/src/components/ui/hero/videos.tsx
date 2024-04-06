@@ -23,7 +23,7 @@ const HVideo: React.FC = () => {
       try {
         const response = await fetch(
           `${process.env.API_URL}/galleries?locale=${
-            i18n.language == "en-US" ? "en" : "ar"
+            i18n.language.startsWith("en") ? "en" : "ar"
           }&populate=*`
         );
         const data = await response.json();

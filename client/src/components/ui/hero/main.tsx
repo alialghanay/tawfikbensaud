@@ -38,12 +38,18 @@ const HMain = () => {
           opacity: 1,
           transition: { duration: 0.02 },
         }}
-        onTap={() => setCurrentImage("/tawfikbensaud-nice.svg")}
+        onTap={() =>
+          setCurrentImage((prev) =>
+            prev === "/tawfikbensaud-white.svg"
+              ? "/tawfikbensaud-nice.svg"
+              : "/tawfikbensaud-white.svg"
+          )
+        }
         onPanEnd={() => setCurrentImage("/tawfikbensaud-white.svg")}
       >
         <Image src={currentImage} alt="iam tawfik logo" fill />
       </motion.div>
-      <div className="-z-10 absolute -top-8 -right-12 w-[200px] h-[200px] xs:w-[225px] xs:h-[225px] sm:w-[300px] sm:h-[300px] sm:-top-12 sm:-right-16 md:w-[400px] md:h-[400px] lg:w-[600px] lg:h-[600px] lg:-top-16 lg:-right-28 2xl:w-[800px] 2xl:h-[800px] 2xl:-top-20 2xl:-right-32">
+      <div className="-z-10 absolute -top-8 -right-6 w-[200px] h-[200px] xs:w-[225px] xs:h-[225px] sm:w-[300px] sm:h-[300px] sm:-top-12 sm:-right-16 md:w-[400px] md:h-[400px] lg:w-[600px] lg:h-[600px] lg:-top-16 lg:-right-28 2xl:w-[800px] 2xl:h-[800px] 2xl:-top-20 2xl:-right-32">
         <Image
           src="/Rectangle.svg"
           alt="iam tawfik logo background"

@@ -7,7 +7,7 @@ import translationEN from "./translations/en.json";
 import translationAR from "./translations/ar.json";
 
 const resources = {
-  "en-US": {
+  en: {
     translation: translationEN,
   },
   ar: {

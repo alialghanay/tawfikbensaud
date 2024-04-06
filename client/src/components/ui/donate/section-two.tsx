@@ -18,10 +18,10 @@ const SectionTwo = () => {
           />
         </svg>
         <h1 className="text-xl font-bold">
-          {i18n.language == "en-US" ? "Register Yourself" : "سجل نفسك"}
+          {i18n.language.startsWith("en") ? "Register Yourself" : "سجل نفسك"}
         </h1>
         <p className="text-2xl">
-          {i18n.language == "en-US"
+          {i18n.language.startsWith("en")
             ? "Sign up to join and be part of the good people who love to share"
             : "سجل للانضمام وكن جزءًا من الأشخاص الطيبين الذين يحبون المشاركة"}
         </p>
@@ -40,10 +40,10 @@ const SectionTwo = () => {
         </svg>
 
         <h1 className="text-xl font-bold">
-          {i18n.language == "en-US" ? "Select Donate" : "حدد التبرع"}
+          {i18n.language.startsWith("en") ? "Select Donate" : "حدد التبرع"}
         </h1>
         <p className="text-2xl">
-          {i18n.language == "en-US"
+          {i18n.language.startsWith("en")
             ? "There are many things you can choose to share goodness with"
             : "هناك العديد من الأشياء التي يمكنك اختيار مشاركة الخير معها"}
         </p>

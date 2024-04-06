@@ -11,11 +11,14 @@ const LanguageSwitcher = ({
   selectedLanguage,
   onChangeLanguage,
 }: LanguageSwitcher) => {
+  if (selectedLanguage.startsWith("en")) {
+    selectedLanguage = "en";
+  }
   return (
     <div className="language-switcher shadow-cos">
       <button
-        className={`but-lan ${selectedLanguage === "en-US" ? "active" : ""}`}
-        onClick={() => onChangeLanguage("en-US")}
+        className={`but-lan ${selectedLanguage === "en" ? "active" : ""}`}
+        onClick={() => onChangeLanguage("en")}
       >
         Eng
       </button>

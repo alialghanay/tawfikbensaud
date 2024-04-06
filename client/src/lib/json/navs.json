@@ -1,5 +1,5 @@
 {
-  "en-US": [
+  "en": [
     { "title": "home", "path": "home" },
     { "title": "donate", "path": "donate" },
     { "title": "contact us", "path": "contact-us" },

@@ -8,8 +8,9 @@ import { FaInstagram, FaLinkedin, FaSquareFacebook } from "react-icons/fa6";
 
 interface MenuOverlayProps {
   onClick: () => void;
+  language: string;
 }
-const MenuOverlay = ({ onClick }: MenuOverlayProps) => {
+const MenuOverlay = ({ onClick, language }: MenuOverlayProps) => {
   const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
@@ -27,7 +28,7 @@ const MenuOverlay = ({ onClick }: MenuOverlayProps) => {
       });
     }, options);
 
-    navs[i18n.language as keyof typeof navs].forEach((nav) => {
+    navs[language.startsWith("en") ? "en" : "ar"].forEach((nav) => {
       const element = document.getElementById(nav.path);
       if (element) {
         observer.observe(element);
@@ -41,7 +42,7 @@ const MenuOverlay = ({ onClick }: MenuOverlayProps) => {
 
   return (
     <div className="flex flex-col py-12 h-screen items-center text-2xl gap-12">
-      {navs[i18n.language as keyof typeof navs].map((nav, index) => (
+      {navs[language.startsWith("en") ? "en" : "ar"].map((nav, index) => (
         <ScrollLink
           key={index}
           to={nav.path}

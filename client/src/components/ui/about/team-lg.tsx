@@ -27,7 +27,7 @@ const TeamLargeSecreens = () => {
       try {
         const response = await fetch(
           `${process.env.API_URL}/teams?locale=${
-            i18n.language == "en-US" ? "en" : "ar"
+            i18n.language.startsWith("en") ? "en" : "ar"
           }&populate=*`
         );
         const data = await response.json();
@@ -115,7 +115,9 @@ const TeamLargeSecreens = () => {
                   <div className="flex justify-center">
                     {person.customPage ? (
                       <Button
-                        label={i18n.language == "en-US" ? "Explore" : "تصفح"}
+                        label={
+                          i18n.language.startsWith("en") ? "Explore" : "تصفح"
+                        }
                         onClick={() => window.open(person.cPUrl)}
                       />
                     ) : null}
@@ -181,7 +183,7 @@ const TeamLargeSecreens = () => {
             <div className="flex justify-center">
               {person.customPage ? (
                 <Button
-                  label={i18n.language == "en-US" ? "Explore" : "تصفح"}
+                  label={i18n.language.startsWith("en") ? "Explore" : "تصفح"}
                   onClick={() => window.open(person.cPUrl)}
                 />
               ) : null}
